@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO).then(() => {
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
