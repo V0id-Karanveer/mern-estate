@@ -1,16 +1,18 @@
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import logo from '../assets/logo.svg';
 
 function Header() {
     const {currentUser} = useSelector(state => state.user);
     return (
         <header className='bg-slate-200 shadow-md'>
             <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
-                <Link to='/'>
+                <Link to='/' className='flex flex-row gap-2'>
+                    <img src={logo} className='h-8'/>
                     <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
                         <span className='text-slate-500'>Ghar</span>
-                        <span className='text-cyan-500'>Search</span>
+                        <span className='text-slate-700'>Khojo</span>
                     </h1>
                 </Link>
                 <form className='bg-slate-100 p-3 rounded-lg flex items-center'>
