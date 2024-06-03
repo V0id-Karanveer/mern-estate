@@ -161,7 +161,7 @@ function Profile() {
           alt='profile'
           className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2'
         />
-        
+
         <p className='text-sm self-center'>
           {fileUploadError ? (
             <span className='text-red-700'>
@@ -226,7 +226,9 @@ function Profile() {
               </Link>
               <div className='flex flex-col items-center'>
                 <button onClick={()=>handleListingDelete(listing._id)} className='text-red-700 uppercase'>Delete</button>
+                <Link to={`/update-listing/${listing._id}`}>
                 <button className='text-green-700 uppercase'>Edit</button>
+                </Link>
               </div>
             </div>
           ))}
