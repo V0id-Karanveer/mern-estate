@@ -161,7 +161,7 @@ function Profile() {
           alt='profile'
           className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2'
         />
-
+        
         <p className='text-sm self-center'>
           {fileUploadError ? (
             <span className='text-red-700'>
