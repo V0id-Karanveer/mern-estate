@@ -93,8 +93,8 @@ export default function Listing() {
             <p className='text-2xl font-semibold'>
               {listing.name} - ₹{' '}
               {listing.offer
-                ? listing.discountPrice.toLocaleString('en-US')
-                : listing.regularPrice.toLocaleString('en-US')}
+                ? listing.discountPrice.toLocaleString('en-IN')
+                : listing.regularPrice.toLocaleString('en-IN')}
               {listing.type === 'rent' && ' / month'}
             </p>
             <p className='flex items-center mt-0 gap-2 text-slate-600  text-sm'>
@@ -144,7 +144,7 @@ export default function Listing() {
               >
                 Contact Owner
               </button>
-            ): !contact && <p className=''>Kindly <Link to={'/sign-in'} className='font-semibold text-blue-500 underline'>Login</Link> to contact the Owner</p>}
+            ): !contact && listing.userRef !== currentUser._id && <p className=''>Kindly <Link to={'/sign-in'} className='font-semibold text-blue-500 underline'>Login</Link> to contact the Owner</p>}
             {contact && <Contact listing={listing} />}
           </div>
         </div>
