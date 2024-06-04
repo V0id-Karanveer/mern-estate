@@ -172,7 +172,7 @@ function Profile() {
           ) : filePerc === 100 ? (
             <span className='text-green-700'>Image successfully uploaded!</span>
           ) : (
-            ''
+            <span className='text-slate-700'>Click on the Image to upload</span>
           )}
         </p>
 
